@@ -1,65 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Berg-Tal Logistik GmbH - Services</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Berg Tal Logistik GmbH | Services</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-    <header class="header">
-      <div class="wrap nav">
-        <div class="logo">Berg-Tal Logistik GmbH</div>
-        <div class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="mission.html">Mission</a><a href="leadership.html">Leadership</a><a href="services.html">Services</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a><a href="consult.html">Consult</a></div>
-        <div class="track"><input type="text" placeholder="Track ID"><button>Track</button></div>
-      </div>
-    </header>
-    <div class="ticker"><span>Munich Hub | Zurich Hub | Milan Hub | Rotterdam Hub | Cold Chain Available</span><span>Munich Hub | Zurich Hub | Milan Hub | Rotterdam Hub | Cold Chain Available</span></div>
-    
-
-    <section class="section"><div class="wrap grid-3">
-        <article class="card">
-          <h3>Road Freight</h3>
-          <p>Full truckload and less-than-truckload across Europe.</p>
-          <ul><li>Dedicated lanes</li><li>Time-definite delivery</li><li>GPS tracking</li></ul>
-        </article>
-        
-        <article class="card">
-          <h3>Rail and Sea Freight</h3>
-          <p>Cost-effective long-haul and intermodal shipping.</p>
-          <ul><li>Port coordination</li><li>Intermodal planning</li><li>Container management</li></ul>
-        </article>
-        
-        <article class="card">
-          <h3>Warehousing</h3>
-          <p>Secure storage and fulfillment with real-time inventory.</p>
-          <ul><li>Cross-docking</li><li>Pick and pack</li><li>Inventory reporting</li></ul>
-        </article>
-        
-        <article class="card">
-          <h3>Customs Brokerage</h3>
-          <p>Smooth cross-border documentation and compliance.</p>
-          <ul><li>EU customs clearance</li><li>Trade compliance</li><li>Duty optimization</li></ul>
-        </article>
-        
-        <article class="card">
-          <h3>Cold Chain Logistics</h3>
-          <p>Temperature-controlled transport for sensitive goods.</p>
-          <ul><li>Validated equipment</li><li>Continuous temperature logging</li><li>Pharma expertise</li></ul>
-        </article>
-        </div></section>
-    <section class="section"><div class="wrap grid-3"><div class="step"><h3>Plan</h3><p>Route, timing, and handling requirements defined.</p></div><div class="step"><h3>Execute</h3><p>Dispatch and live tracking with proactive updates.</p></div><div class="step"><h3>Report</h3><p>Delivery confirmation with KPI dashboards.</p></div></div></section>
-    
-
-    <footer class="footer">
-      <div class="wrap grid-4">
-        <div><h3>Berg-Tal Logistik GmbH</h3><p>Precision logistics across Europe.</p></div>
-        <div><h4>Contact</h4><p>info@berg-tal-logistik.de<br>+49 89 555 0144</p></div>
-        <div><h4>Office</h4><p>Landsberger Strasse 312, 80687 Munich, Germany</p></div>
-        <div><h4>Hours</h4><p>Mon to Fri, 7:00am to 7:00pm CET</p></div>
-      </div>
-    </footer>
-    
+<body class="page-services">
+  <header class="site-header">
+    <div class="brand">Berg-Tal Logistik</div>
+    <nav class="primary-nav">
+      <a href="index.html" data-page="index">[ projects ]</a>
+      <a href="about.html" data-page="about">about</a>
+      <a href="services.html" data-page="services">program</a>
+      <a href="mission.html" data-page="mission">mission</a>
+      <a href="leadership.html" data-page="leadership">team</a>
+      <a href="careers.html" data-page="careers">careers</a>
+      <a href="contact.html" data-page="contact">contact</a>
+      <a href="consult.html" data-page="consult">consult</a>
+    </nav>
+  </header>
+  <div class="progress" id="scroll-progress">0%</div>
+  <main>
+    <section class="hero">
+  <div>
+    <div class="bracket">[ program ]</div>
+    <h1>Programs built to keep cargo moving.</h1>
+  </div>
+  <div>
+    <p>From high-security freight to temperature-sensitive shipments, our programs are tuned for speed and transparency.</p>
+  </div>
+</section>
+<section>
+  <div class="grid">
+    <div class="card"><h3>Secure freight</h3><p>GPS tracking, sealed containers, and escalation protocols.</p></div>
+    <div class="card"><h3>Cold chain</h3><p>Continuous monitoring with redundant cooling systems.</p></div>
+    <div class="card"><h3>Industrial</h3><p>Oversized loads with specialized route planning.</p></div>
+    <div class="card"><h3>Express lanes</h3><p>Dedicated routes for time-critical shipments.</p></div>
+  </div>
+</section>
+  </main>
+  <div class="ticker">
+    <div class="ticker-track">BERG-TAL LOGISTIK // ROUTE CONTROL // FREIGHT INTELLIGENCE // BERG-TAL LOGISTIK // ROUTE CONTROL // FREIGHT INTELLIGENCE //</div>
+  </div>
+  <footer class="site-footer">
+    <div>
+      Berg-Tal Logistik GmbH<br>
+      Karl-Liebknecht-Strasse 42<br>
+      Leipzig 04107
+    </div>
+    <div>
+      dispatch@bergtallogistik.de<br>
+      +49 341 555 0182
+    </div>
+    <div>
+      24/7 control tower<br>
+      EU cross-border coverage
+    </div>
+  </footer>
+  <script>
+    const progress = document.getElementById('scroll-progress');
+    const updateProgress = () => {
+      const h = document.documentElement;
+      const scrolled = h.scrollTop || document.body.scrollTop;
+      const height = h.scrollHeight - h.clientHeight;
+      const pct = height ? Math.round((scrolled / height) * 100) : 0;
+      progress.textContent = pct + '%';
+    };
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+  </script>
 </body>
 </html>

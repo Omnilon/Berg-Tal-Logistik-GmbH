@@ -1,38 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Berg-Tal Logistik GmbH - Contact</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Berg Tal Logistik GmbH | Contact</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-    <header class="header">
-      <div class="wrap nav">
-        <div class="logo">Berg-Tal Logistik GmbH</div>
-        <div class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="mission.html">Mission</a><a href="leadership.html">Leadership</a><a href="services.html">Services</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a><a href="consult.html">Consult</a></div>
-        <div class="track"><input type="text" placeholder="Track ID"><button>Track</button></div>
-      </div>
-    </header>
-    <div class="ticker"><span>Munich Hub | Zurich Hub | Milan Hub | Rotterdam Hub | Cold Chain Available</span><span>Munich Hub | Zurich Hub | Milan Hub | Rotterdam Hub | Cold Chain Available</span></div>
-    
-
-    <section class="section"><div class="wrap grid-3">
-      <div class="card"><h3>Dispatch</h3><p>+49 89 555 0144</p></div>
-      <div class="card"><h3>Email</h3><p>info@berg-tal-logistik.de</p></div>
-      <div class="card"><h3>Office</h3><p>Landsberger Strasse 312, 80687 Munich, Germany</p></div>
-    </div></section>
-    
-
-    <footer class="footer">
-      <div class="wrap grid-4">
-        <div><h3>Berg-Tal Logistik GmbH</h3><p>Precision logistics across Europe.</p></div>
-        <div><h4>Contact</h4><p>info@berg-tal-logistik.de<br>+49 89 555 0144</p></div>
-        <div><h4>Office</h4><p>Landsberger Strasse 312, 80687 Munich, Germany</p></div>
-        <div><h4>Hours</h4><p>Mon to Fri, 7:00am to 7:00pm CET</p></div>
-      </div>
-    </footer>
-    
+<body class="page-contact">
+  <header class="site-header">
+    <div class="brand">Berg-Tal Logistik</div>
+    <nav class="primary-nav">
+      <a href="index.html" data-page="index">[ projects ]</a>
+      <a href="about.html" data-page="about">about</a>
+      <a href="services.html" data-page="services">program</a>
+      <a href="mission.html" data-page="mission">mission</a>
+      <a href="leadership.html" data-page="leadership">team</a>
+      <a href="careers.html" data-page="careers">careers</a>
+      <a href="contact.html" data-page="contact">contact</a>
+      <a href="consult.html" data-page="consult">consult</a>
+    </nav>
+  </header>
+  <div class="progress" id="scroll-progress">0%</div>
+  <main>
+    <section class="hero">
+  <div>
+    <div class="bracket">[ contact ]</div>
+    <h1>Start a shipment brief.</h1>
+  </div>
+  <div>
+    <p>Tell us about your cargo and timeline. We will respond with an optimized route plan.</p>
+  </div>
+</section>
+<section>
+  <form class="form-grid">
+    <input type="text" placeholder="Company">
+    <input type="email" placeholder="Email">
+    <input type="text" placeholder="Origin">
+    <input type="text" placeholder="Destination">
+    <textarea placeholder="Cargo details"></textarea>
+    <button class="primary" type="submit">Submit brief</button>
+  </form>
+</section>
+  </main>
+  <div class="ticker">
+    <div class="ticker-track">BERG-TAL LOGISTIK // ROUTE CONTROL // FREIGHT INTELLIGENCE // BERG-TAL LOGISTIK // ROUTE CONTROL // FREIGHT INTELLIGENCE //</div>
+  </div>
+  <footer class="site-footer">
+    <div>
+      Berg-Tal Logistik GmbH<br>
+      Karl-Liebknecht-Strasse 42<br>
+      Leipzig 04107
+    </div>
+    <div>
+      dispatch@bergtallogistik.de<br>
+      +49 341 555 0182
+    </div>
+    <div>
+      24/7 control tower<br>
+      EU cross-border coverage
+    </div>
+  </footer>
+  <script>
+    const progress = document.getElementById('scroll-progress');
+    const updateProgress = () => {
+      const h = document.documentElement;
+      const scrolled = h.scrollTop || document.body.scrollTop;
+      const height = h.scrollHeight - h.clientHeight;
+      const pct = height ? Math.round((scrolled / height) * 100) : 0;
+      progress.textContent = pct + '%';
+    };
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+  </script>
 </body>
 </html>

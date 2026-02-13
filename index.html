@@ -1,105 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Berg-Tal Logistik GmbH - Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Berg Tal Logistik GmbH | Home</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-    <header class="header">
-      <div class="wrap nav">
-        <div class="logo">Berg-Tal Logistik GmbH</div>
-        <div class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="mission.html">Mission</a><a href="leadership.html">Leadership</a><a href="services.html">Services</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a><a href="consult.html">Consult</a></div>
-        <div class="track"><input type="text" placeholder="Track ID"><button>Track</button></div>
-      </div>
-    </header>
-    <div class="ticker"><span>Munich Hub | Zurich Hub | Milan Hub | Rotterdam Hub | Cold Chain Available</span><span>Munich Hub | Zurich Hub | Milan Hub | Rotterdam Hub | Cold Chain Available</span></div>
-    
-
+<body class="page-index">
+  <header class="site-header">
+    <div class="brand">Berg-Tal Logistik</div>
+    <nav class="primary-nav">
+      <a href="index.html" data-page="index">[ projects ]</a>
+      <a href="about.html" data-page="about">about</a>
+      <a href="services.html" data-page="services">program</a>
+      <a href="mission.html" data-page="mission">mission</a>
+      <a href="leadership.html" data-page="leadership">team</a>
+      <a href="careers.html" data-page="careers">careers</a>
+      <a href="contact.html" data-page="contact">contact</a>
+      <a href="consult.html" data-page="consult">consult</a>
+    </nav>
+  </header>
+  <div class="progress" id="scroll-progress">0%</div>
+  <main>
     <section class="hero">
-      <div class="wrap">
-        <h1>From Alpine hubs to global ports.</h1>
-        <p>Our dispatch teams coordinate shipments across Europe with continuous tracking and proactive communication.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="dashboard">
-        <aside class="sidebar">
-          <h3>Dispatch desk</h3>
-          <p>Live updates every 30 minutes.</p>
-          <div class="route"><span>Priority lanes</span><p>DACH to Benelux</p></div>
-          <div class="route"><span>Cold chain</span><p>Pharma and biotech</p></div>
-        </aside>
-        <div>
-          <div class="grid-3">
-        <article class="card">
-          <h3>Road Freight</h3>
-          <p>Full truckload and less-than-truckload across Europe.</p>
-          <ul><li>Dedicated lanes</li><li>Time-definite delivery</li><li>GPS tracking</li></ul>
-        </article>
-        
-        <article class="card">
-          <h3>Rail and Sea Freight</h3>
-          <p>Cost-effective long-haul and intermodal shipping.</p>
-          <ul><li>Port coordination</li><li>Intermodal planning</li><li>Container management</li></ul>
-        </article>
-        
-        <article class="card">
-          <h3>Warehousing</h3>
-          <p>Secure storage and fulfillment with real-time inventory.</p>
-          <ul><li>Cross-docking</li><li>Pick and pack</li><li>Inventory reporting</li></ul>
-        </article>
-        </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt">
-      <div class="wrap">
-        <h2>Active lanes</h2>
-        <table class="table">
-          <thead><tr><th>Lane</th><th>Mode</th><th>ETA</th><th>Status</th></tr></thead>
-          <tbody>
-            <tr><td>Munich to Rotterdam</td><td>Road</td><td>48 hrs</td><td>On schedule</td></tr>
-            <tr><td>Vienna to Milan</td><td>Rail</td><td>60 hrs</td><td>Departed</td></tr>
-            <tr><td>Hamburg to Zurich</td><td>Cold chain</td><td>36 hrs</td><td>Loading</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section class="section"><div class="wrap grid-3">
-    <article class="card">
-      <h3>Alpine Pharma</h3>
-      <p>Cold chain transport across three countries.</p>
-      <p><strong>Result:</strong> 98% on-time with full temperature compliance.</p>
-    </article>
-    
-    <article class="card">
-      <h3>Nordlicht Retail</h3>
-      <p>Last-mile rollout for seasonal campaigns.</p>
-      <p><strong>Result:</strong> 2-day delivery across Germany.</p>
-    </article>
-    
-    <article class="card">
-      <h3>Helios Manufacturing</h3>
-      <p>Intermodal freight optimization for exports.</p>
-      <p><strong>Result:</strong> 12% cost reduction on lanes.</p>
-    </article>
-    </div></section>
-    
-
-    <footer class="footer">
-      <div class="wrap grid-4">
-        <div><h3>Berg-Tal Logistik GmbH</h3><p>Precision logistics across Europe.</p></div>
-        <div><h4>Contact</h4><p>info@berg-tal-logistik.de<br>+49 89 555 0144</p></div>
-        <div><h4>Office</h4><p>Landsberger Strasse 312, 80687 Munich, Germany</p></div>
-        <div><h4>Hours</h4><p>Mon to Fri, 7:00am to 7:00pm CET</p></div>
-      </div>
-    </footer>
-    
+  <div>
+    <div class="bracket">[ freight control ]</div>
+    <h1>We move critical cargo with precision routing.</h1>
+  </div>
+  <div>
+    <p>Berg-Tal Logistik delivers high-velocity freight orchestration with a real-time control tower, optimized routes, and resilient partner networks.</p>
+  </div>
+</section>
+<section>
+  <div class="bracket">[ capabilities ]</div>
+  <div class="grid">
+    <div class="card"><h3>Control tower</h3><p>24/7 routing intelligence, exception handling, and predictive risk modeling.</p></div>
+    <div class="card"><h3>Cross-border</h3><p>Customs handling, bonded storage, and multi-modal transitions.</p></div>
+    <div class="card"><h3>Specialized freight</h3><p>Temperature-controlled and high-value cargo programs.</p></div>
+    <div class="card"><h3>Fleet partners</h3><p>Verified EU carrier network with compliance audits.</p></div>
+  </div>
+</section>
+<section>
+  <div class="bracket">[ live routes ]</div>
+  <div class="horizontal">
+    <div class="card"><h3>Route 01</h3><p>Hamburg -> Milan | 18 hours | Pharma</p></div>
+    <div class="card"><h3>Route 02</h3><p>Rotterdam -> Warsaw | 26 hours | Automotive</p></div>
+    <div class="card"><h3>Route 03</h3><p>Leipzig -> Vienna | 14 hours | Retail</p></div>
+    <div class="card"><h3>Route 04</h3><p>Prague -> Lyon | 22 hours | Electronics</p></div>
+  </div>
+</section>
+  </main>
+  <div class="ticker">
+    <div class="ticker-track">BERG-TAL LOGISTIK // ROUTE CONTROL // FREIGHT INTELLIGENCE // BERG-TAL LOGISTIK // ROUTE CONTROL // FREIGHT INTELLIGENCE //</div>
+  </div>
+  <footer class="site-footer">
+    <div>
+      Berg-Tal Logistik GmbH<br>
+      Karl-Liebknecht-Strasse 42<br>
+      Leipzig 04107
+    </div>
+    <div>
+      dispatch@bergtallogistik.de<br>
+      +49 341 555 0182
+    </div>
+    <div>
+      24/7 control tower<br>
+      EU cross-border coverage
+    </div>
+  </footer>
+  <script>
+    const progress = document.getElementById('scroll-progress');
+    const updateProgress = () => {
+      const h = document.documentElement;
+      const scrolled = h.scrollTop || document.body.scrollTop;
+      const height = h.scrollHeight - h.clientHeight;
+      const pct = height ? Math.round((scrolled / height) * 100) : 0;
+      progress.textContent = pct + '%';
+    };
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+  </script>
 </body>
 </html>

@@ -1,35 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Berg-Tal Logistik GmbH - Careers</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Berg Tal Logistik GmbH | Careers</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-    <header class="header">
-      <div class="wrap nav">
-        <div class="logo">Berg-Tal Logistik GmbH</div>
-        <div class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="mission.html">Mission</a><a href="leadership.html">Leadership</a><a href="services.html">Services</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a><a href="consult.html">Consult</a></div>
-        <div class="track"><input type="text" placeholder="Track ID"><button>Track</button></div>
-      </div>
-    </header>
-    <div class="ticker"><span>Munich Hub | Zurich Hub | Milan Hub | Rotterdam Hub | Cold Chain Available</span><span>Munich Hub | Zurich Hub | Milan Hub | Rotterdam Hub | Cold Chain Available</span></div>
-    
-
-    <section class="section"><div class="wrap grid-3"><div class="tile"><h3>EU logistics training programs</h3><p></p></div><div class="tile"><h3>Shift scheduling flexibility</h3><p></p></div><div class="tile"><h3>Safety bonuses</h3><p></p></div><div class="tile"><h3>Private health coverage</h3><p></p></div></div></section>
-    <section class="section alt"><div class="wrap grid-3"><div class="step"><h3>Dispatch Coordinator</h3><p>Coordinate routes and manage carrier partners.</p></div><div class="step"><h3>Warehouse Supervisor</h3><p>Lead warehouse operations and staffing.</p></div><div class="step"><h3>Customs Specialist</h3><p>Handle cross-border documentation and compliance.</p></div></div></section>
-    
-
-    <footer class="footer">
-      <div class="wrap grid-4">
-        <div><h3>Berg-Tal Logistik GmbH</h3><p>Precision logistics across Europe.</p></div>
-        <div><h4>Contact</h4><p>info@berg-tal-logistik.de<br>+49 89 555 0144</p></div>
-        <div><h4>Office</h4><p>Landsberger Strasse 312, 80687 Munich, Germany</p></div>
-        <div><h4>Hours</h4><p>Mon to Fri, 7:00am to 7:00pm CET</p></div>
-      </div>
-    </footer>
-    
+<body class="page-careers">
+  <header class="site-header">
+    <div class="brand">Berg-Tal Logistik</div>
+    <nav class="primary-nav">
+      <a href="index.html" data-page="index">[ projects ]</a>
+      <a href="about.html" data-page="about">about</a>
+      <a href="services.html" data-page="services">program</a>
+      <a href="mission.html" data-page="mission">mission</a>
+      <a href="leadership.html" data-page="leadership">team</a>
+      <a href="careers.html" data-page="careers">careers</a>
+      <a href="contact.html" data-page="contact">contact</a>
+      <a href="consult.html" data-page="consult">consult</a>
+    </nav>
+  </header>
+  <div class="progress" id="scroll-progress">0%</div>
+  <main>
+    <section class="hero">
+  <div>
+    <div class="bracket">[ careers ]</div>
+    <h1>Join the logistics front line.</h1>
+  </div>
+  <div>
+    <p>We are hiring dispatch specialists, network planners, and control tower analysts.</p>
+  </div>
+</section>
+<section>
+  <div class="grid">
+    <div class="card"><h3>Control Tower Analyst</h3><p>Leipzig. Monitor live routes and resolve exceptions.</p></div>
+    <div class="card"><h3>Network Planner</h3><p>Hamburg. Optimize routes across EU hubs.</p></div>
+    <div class="card"><h3>Compliance Officer</h3><p>Munich. Maintain regulatory readiness.</p></div>
+  </div>
+</section>
+  </main>
+  <div class="ticker">
+    <div class="ticker-track">BERG-TAL LOGISTIK // ROUTE CONTROL // FREIGHT INTELLIGENCE // BERG-TAL LOGISTIK // ROUTE CONTROL // FREIGHT INTELLIGENCE //</div>
+  </div>
+  <footer class="site-footer">
+    <div>
+      Berg-Tal Logistik GmbH<br>
+      Karl-Liebknecht-Strasse 42<br>
+      Leipzig 04107
+    </div>
+    <div>
+      dispatch@bergtallogistik.de<br>
+      +49 341 555 0182
+    </div>
+    <div>
+      24/7 control tower<br>
+      EU cross-border coverage
+    </div>
+  </footer>
+  <script>
+    const progress = document.getElementById('scroll-progress');
+    const updateProgress = () => {
+      const h = document.documentElement;
+      const scrolled = h.scrollTop || document.body.scrollTop;
+      const height = h.scrollHeight - h.clientHeight;
+      const pct = height ? Math.round((scrolled / height) * 100) : 0;
+      progress.textContent = pct + '%';
+    };
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+  </script>
 </body>
 </html>
