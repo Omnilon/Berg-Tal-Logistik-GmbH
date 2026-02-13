@@ -4,10 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Berg Tal Logistik GmbH | Consult</title>
+  <meta name="telegram-endpoint" content="https://YOUR_TELEGRAM_PROXY_ENDPOINT">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
-<body class="page-consult">
+<body class="page-consult" data-site="Berg-Tal Logistik GmbH">
   <header class="site-header">
     <div class="brand"><img class="brand-logo" src="assets/logo.png" alt="Berg-Tal logo">Berg-Tal</div>
     <nav class="primary-nav">
@@ -32,7 +33,7 @@
 </section>
 <section class="section">
   <h2>Request a consult</h2>
-  <form class="form-grid">
+  <form class="form-grid js-telegram-form" data-form="consult">
     <input type="text" placeholder="Name">
     <input type="email" placeholder="Email">
     <input type="text" placeholder="Monthly volume">
@@ -66,5 +67,6 @@
       });
     }
   </script>
+  <script src="telegram-form.js" defer></script>
 </body>
 </html>
