@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Inter:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600&display=swap');
 
 :root {
   --steel: #1b3a57;
@@ -10,51 +10,55 @@
 }
 
 * { box-sizing: border-box; }
-body { margin: 0; font-family: 'Inter', sans-serif; background: var(--bg); color: var(--ink); }
+body { margin: 0; font-family: 'Barlow', sans-serif; background: var(--bg); color: var(--ink); }
 a { color: inherit; text-decoration: none; }
 .wrap { width: min(1120px, 92vw); margin: 0 auto; }
 
 .header { background: #fff; border-bottom: 2px solid var(--steel); }
 .nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; gap: 20px; }
-.logo { font-family: 'Oswald', sans-serif; font-size: 1.6rem; letter-spacing: 1px; text-transform: uppercase; }
+.logo { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; letter-spacing: 1px; }
 .nav-links { display: flex; gap: 14px; flex-wrap: wrap; font-size: 0.9rem; text-transform: uppercase; }
+
+.ticker { background: var(--steel); color: #fff; overflow: hidden; white-space: nowrap; }
+.ticker span { display: inline-block; padding: 6px 30px; animation: flow 16s linear infinite; font-size: 0.85rem; }
 
 .track { display: flex; gap: 8px; align-items: center; }
 .track input { padding: 8px 10px; border: 1px solid var(--border); border-radius: 6px; }
 .track button { background: var(--orange); border: none; padding: 8px 12px; color: #fff; border-radius: 6px; font-weight: 600; }
 
-.hero { position: relative; background: linear-gradient(120deg, var(--steel), #0e2236); color: #fff; padding: 80px 0 70px; clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
-.hero h1 { font-family: 'Oswald', sans-serif; font-size: clamp(2.4rem, 4vw, 3.6rem); margin: 0 0 12px 0; }
-.hero p { color: rgba(255,255,255,0.8); }
-.hero .badges { display: flex; gap: 10px; flex-wrap: wrap; }
-.badge { background: rgba(255,255,255,0.12); padding: 6px 12px; border-radius: 999px; font-size: 0.8rem; }
+.dashboard { display: grid; grid-template-columns: 260px 1fr; gap: 24px; padding: 40px 0; }
+.sidebar { background: #fff; border: 1px solid var(--border); padding: 20px; border-radius: 12px; }
+.sidebar h3 { margin-top: 0; }
 
-.section { padding: 70px 0; }
+.hero { background: linear-gradient(120deg, var(--steel), #0e2236); color: #fff; padding: 60px 0 50px; }
+.hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.6rem, 4vw, 3.6rem); margin: 0 0 12px 0; }
+.hero p { color: rgba(255,255,255,0.8); }
+
+.section { padding: 40px 0; }
 .section.alt { background: #fff; }
 .grid-3 { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
-.card { background: #fff; border: 1px solid var(--border); padding: 20px; border-radius: 12px; transition: transform 0.2s ease; }
-.card:hover { transform: translateX(6px); }
+
+.card { background: #fff; border: 1px solid var(--border); padding: 20px; border-radius: 12px; }
 .card ul { margin: 12px 0 0; padding-left: 18px; color: var(--muted); }
 
-.tile { background: #fff; border: 1px solid var(--border); padding: 18px; border-radius: 12px; }
+.route { border-left: 3px solid var(--orange); padding-left: 16px; margin-bottom: 16px; }
+.route span { font-weight: 700; color: var(--steel); }
+
+.table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.table th, .table td { border-bottom: 1px solid var(--border); padding: 10px; text-align: left; }
+.table th { text-transform: uppercase; font-size: 0.75rem; color: var(--muted); }
+
+.step { background: #fff; border: 1px dashed var(--border); border-radius: 12px; padding: 16px; }
 
 .form { display: grid; gap: 10px; margin-top: 12px; }
 input, textarea, select { width: 100%; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--border); font-family: inherit; }
 textarea { min-height: 120px; }
 .btn { background: var(--orange); color: #fff; border: none; padding: 10px 12px; border-radius: 6px; font-weight: 600; }
 
-.route { border-left: 3px solid var(--orange); padding-left: 16px; margin-bottom: 16px; }
-.route span { font-weight: 700; color: var(--steel); }
-
-.team-card { display: grid; gap: 12px; }
-.team-card img { width: 100%; border-radius: 10px; }
-.role { color: var(--orange); font-weight: 600; margin: 2px 0 6px; }
-
-.step { background: #fff; border: 1px dashed var(--border); border-radius: 12px; padding: 16px; }
-
-.footer { background: var(--steel); color: #fff; padding: 50px 0 30px; }
+.footer { background: var(--steel); color: #fff; padding: 40px 0 20px; }
 .footer .grid-4 { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
 .footer p { color: rgba(255,255,255,0.75); }
 
-@keyframes slide { from { opacity: 0; transform: translateX(-20px); } to { opacity: 1; transform: translateX(0); } }
-.section { animation: slide 0.5s ease both; }
+@keyframes flow { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+@media (max-width: 960px) { .dashboard { grid-template-columns: 1fr; } }
