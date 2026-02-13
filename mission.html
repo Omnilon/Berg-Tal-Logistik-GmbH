@@ -5,43 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Berg Tal Logistik GmbH | Mission</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body class="page-mission">
   <header class="site-header">
-    <div class="brand">Berg-Tal Logistik</div>
+    <div class="brand"><img class="brand-logo" src="assets/logo.png" alt="Berg-Tal logo">Berg-Tal</div>
     <nav class="primary-nav">
-      <a href="index.html" data-page="index">[ projects ]</a>
-      <a href="about.html" data-page="about">about</a>
-      <a href="services.html" data-page="services">program</a>
-      <a href="mission.html" data-page="mission">mission</a>
-      <a href="leadership.html" data-page="leadership">team</a>
-      <a href="careers.html" data-page="careers">careers</a>
-      <a href="contact.html" data-page="contact">contact</a>
-      <a href="consult.html" data-page="consult">consult</a>
+      <a href="index.html" data-page="index">Explore</a>
+      <a href="about.html" data-page="about">Story</a>
+      <a href="services.html" data-page="services">Services</a>
+      <a href="mission.html" data-page="mission">Mission</a>
+      <a href="leadership.html" data-page="leadership">Guides</a>
+      <a href="careers.html" data-page="careers">Careers</a>
+      <a href="contact.html" data-page="contact">Contact</a>
+      <a href="consult.html" data-page="consult">Inquire</a>
     </nav>
+    <a class="inquire-btn" href="consult.html">Inquire</a>
   </header>
-  <div class="progress" id="scroll-progress">0%</div>
-  <main>
-    <section class="hero">
-  <div>
-    <div class="bracket">[ mission ]</div>
+  <button class="audio-toggle" type="button">Audio off</button>
+  <main class="storybook">
+    <section class="hero" style="background-image: url('assets/hero-1.png');">
+  <div class="hero-content">
     <h1>Relentless reliability.</h1>
-  </div>
-  <div>
     <p>Our mission is to deliver certainty in every shipment through precision planning, disciplined execution, and total visibility.</p>
   </div>
 </section>
-<section>
-  <div class="grid">
-    <div class="card"><h3>Visibility</h3><p>Every load is tracked in real time with proactive alerts.</p></div>
-    <div class="card"><h3>Discipline</h3><p>Standardized procedures across all hubs and partners.</p></div>
-    <div class="card"><h3>Speed</h3><p>We move fast without compromising safety.</p></div>
+<section class="section">
+  <h2>What we stand for</h2>
+  <div class="map">
+    <div class="map-card"><span>Visibility</span><p>Real-time tracking and predictive alerts.</p></div>
+    <div class="map-card"><span>Continuity</span><p>Redundant routing keeps shipments on schedule.</p></div>
+    <div class="map-card"><span>Trust</span><p>Clear communication at every handoff.</p></div>
   </div>
 </section>
   </main>
-  <div class="ticker">
-    <div class="ticker-track">BERG-TAL LOGISTIK // ROUTE CONTROL // FREIGHT INTELLIGENCE // BERG-TAL LOGISTIK // ROUTE CONTROL // FREIGHT INTELLIGENCE //</div>
-  </div>
   <footer class="site-footer">
     <div>
       Berg-Tal Logistik GmbH<br>
@@ -58,16 +55,13 @@
     </div>
   </footer>
   <script>
-    const progress = document.getElementById('scroll-progress');
-    const updateProgress = () => {
-      const h = document.documentElement;
-      const scrolled = h.scrollTop || document.body.scrollTop;
-      const height = h.scrollHeight - h.clientHeight;
-      const pct = height ? Math.round((scrolled / height) * 100) : 0;
-      progress.textContent = pct + '%';
-    };
-    window.addEventListener('scroll', updateProgress, { passive: true });
-    updateProgress();
+    const audioBtn = document.querySelector('.audio-toggle');
+    if (audioBtn) {
+      audioBtn.addEventListener('click', () => {
+        audioBtn.classList.toggle('off');
+        audioBtn.textContent = audioBtn.classList.contains('off') ? 'Audio on' : 'Audio off';
+      });
+    }
   </script>
 </body>
 </html>

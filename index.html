@@ -5,54 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Berg Tal Logistik GmbH | Home</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body class="page-index">
   <header class="site-header">
-    <div class="brand">Berg-Tal Logistik</div>
+    <div class="brand"><img class="brand-logo" src="assets/logo.png" alt="Berg-Tal logo">Berg-Tal</div>
     <nav class="primary-nav">
-      <a href="index.html" data-page="index">[ projects ]</a>
-      <a href="about.html" data-page="about">about</a>
-      <a href="services.html" data-page="services">program</a>
-      <a href="mission.html" data-page="mission">mission</a>
-      <a href="leadership.html" data-page="leadership">team</a>
-      <a href="careers.html" data-page="careers">careers</a>
-      <a href="contact.html" data-page="contact">contact</a>
-      <a href="consult.html" data-page="consult">consult</a>
+      <a href="index.html" data-page="index">Explore</a>
+      <a href="about.html" data-page="about">Story</a>
+      <a href="services.html" data-page="services">Services</a>
+      <a href="mission.html" data-page="mission">Mission</a>
+      <a href="leadership.html" data-page="leadership">Guides</a>
+      <a href="careers.html" data-page="careers">Careers</a>
+      <a href="contact.html" data-page="contact">Contact</a>
+      <a href="consult.html" data-page="consult">Inquire</a>
     </nav>
+    <a class="inquire-btn" href="consult.html">Inquire</a>
   </header>
-  <div class="progress" id="scroll-progress">0%</div>
-  <main>
-    <section class="hero">
-  <div>
-    <div class="bracket">[ freight control ]</div>
-    <h1>We move critical cargo with precision routing.</h1>
-  </div>
-  <div>
-    <p>Berg-Tal Logistik delivers high-velocity freight orchestration with a real-time control tower, optimized routes, and resilient partner networks.</p>
+  <button class="audio-toggle" type="button">Audio off</button>
+  <main class="storybook">
+    <section class="hero" style="background-image: url('assets/hero-1.png');">
+  <div class="hero-content">
+    <h1>Freight routes designed like a journey.</h1>
+    <p>Berg-Tal Logistik moves critical cargo across Europe with clarity, calm coordination, and a relentless focus on on-time delivery.</p>
   </div>
 </section>
-<section>
-  <div class="bracket">[ capabilities ]</div>
-  <div class="grid">
-    <div class="card"><h3>Control tower</h3><p>24/7 routing intelligence, exception handling, and predictive risk modeling.</p></div>
-    <div class="card"><h3>Cross-border</h3><p>Customs handling, bonded storage, and multi-modal transitions.</p></div>
-    <div class="card"><h3>Specialized freight</h3><p>Temperature-controlled and high-value cargo programs.</p></div>
-    <div class="card"><h3>Fleet partners</h3><p>Verified EU carrier network with compliance audits.</p></div>
+<section class="story" style="background-image: url('assets/story-2.png');">
+  <div class="story-content">
+    <h2>Route intelligence</h2>
+    <p>Live control tower data, dynamic routing, and proactive exception handling.</p>
   </div>
 </section>
-<section>
-  <div class="bracket">[ live routes ]</div>
-  <div class="horizontal">
-    <div class="card"><h3>Route 01</h3><p>Hamburg -> Milan | 18 hours | Pharma</p></div>
-    <div class="card"><h3>Route 02</h3><p>Rotterdam -> Warsaw | 26 hours | Automotive</p></div>
-    <div class="card"><h3>Route 03</h3><p>Leipzig -> Vienna | 14 hours | Retail</p></div>
-    <div class="card"><h3>Route 04</h3><p>Prague -> Lyon | 22 hours | Electronics</p></div>
+<section class="story">
+  <video autoplay muted loop playsinline poster="assets/hero-1.png">
+    <source src="assets/reel.mp4" type="video/mp4">
+  </video>
+  <div class="story-content">
+    <h2>Control tower</h2>
+    <p>24/7 dispatch operations with escalation playbooks and cross-border compliance.</p>
+  </div>
+</section>
+<section class="story" style="background-image: url('assets/hero-1.png');">
+  <div class="story-content">
+    <h2>Fleet partners</h2>
+    <p>Verified carriers, temperature control, and secure freight protocols.</p>
+  </div>
+</section>
+<section class="section">
+  <h2>Service map</h2>
+  <div class="map">
+    <div class="map-card"><span>Route 01</span><h3>Control tower</h3><p>24/7 routing intelligence, exception handling, and predictive risk modeling.</p></div>
+    <div class="map-card"><span>Route 02</span><h3>Cross-border</h3><p>Customs handling, bonded storage, and multi-modal transitions.</p></div>
+    <div class="map-card"><span>Route 03</span><h3>Specialized freight</h3><p>Temperature-controlled and high-value cargo programs.</p></div>
+    <div class="map-card"><span>Route 04</span><h3>Fleet partners</h3><p>Verified EU carrier network with compliance audits.</p></div>
   </div>
 </section>
   </main>
-  <div class="ticker">
-    <div class="ticker-track">BERG-TAL LOGISTIK // ROUTE CONTROL // FREIGHT INTELLIGENCE // BERG-TAL LOGISTIK // ROUTE CONTROL // FREIGHT INTELLIGENCE //</div>
-  </div>
   <footer class="site-footer">
     <div>
       Berg-Tal Logistik GmbH<br>
@@ -69,16 +77,13 @@
     </div>
   </footer>
   <script>
-    const progress = document.getElementById('scroll-progress');
-    const updateProgress = () => {
-      const h = document.documentElement;
-      const scrolled = h.scrollTop || document.body.scrollTop;
-      const height = h.scrollHeight - h.clientHeight;
-      const pct = height ? Math.round((scrolled / height) * 100) : 0;
-      progress.textContent = pct + '%';
-    };
-    window.addEventListener('scroll', updateProgress, { passive: true });
-    updateProgress();
+    const audioBtn = document.querySelector('.audio-toggle');
+    if (audioBtn) {
+      audioBtn.addEventListener('click', () => {
+        audioBtn.classList.toggle('off');
+        audioBtn.textContent = audioBtn.classList.contains('off') ? 'Audio on' : 'Audio off';
+      });
+    }
   </script>
 </body>
 </html>
